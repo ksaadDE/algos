@@ -52,7 +52,16 @@ def quickSort(daten, links, rechts):
     daten = quickSort(daten, links, rechts-1)
     return daten
 
+def getDateTime():
+    from datetime import datetime
+    now = datetime.now()
+    dt_string = now.strftime("%d.%m.%Y %H:%M:%S")
+    return dt_string
+
+
 def runTests():
+    print("Running ./algos.py\t", getDateTime())
+    
     expected = [0,10,30,40,200,227,600,4000]
     ar = [227, 0,10,200,4000,30,40,600]
     a = selectionSort(ar)
