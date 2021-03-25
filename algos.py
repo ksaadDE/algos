@@ -52,21 +52,24 @@ def quickSort(daten, links, rechts):
     daten = quickSort(daten, links, rechts-1)
     return daten
 
-expected = [0,10,30,40,200,227,600,4000]
-ar = [227, 0,10,200,4000,30,40,600]
-a = selectionSort(ar)
-assert comapareArrays(a, expected), "[-] The output is different than expected for selectionSort"
-print("[+] selectionSort Test passed")
+def runTests():
+    expected = [0,10,30,40,200,227,600,4000]
+    ar = [227, 0,10,200,4000,30,40,600]
+    a = selectionSort(ar)
+    assert comapareArrays(a, expected), "[-] The output is different than expected for selectionSort"
+    print("[+] selectionSort Test passed")
 
-expected = [10,30,40,200,400,4000]
-ar1 = [10,400,40,30,4000,200]
-b = insertionSort(ar1)
-assert comapareArrays(b, expected), "[-] The output is different than expected for insertSort"
-print("[+] insertSort Test passed")
+    expected = [10,30,40,200,400,4000]
+    ar1 = [10,400,40,30,4000,200]
+    b = insertionSort(ar1)
+    assert comapareArrays(b, expected), "[-] The output is different than expected for insertSort"
+    print("[+] insertSort Test passed")
 
-expected = [10,30,40,200,400,4000]
-ar1 = [10,400,40,30,4000,200]
-b = quickSort(ar1, 0,len(ar1)-1)
-print(b)
-assert comapareArrays(b, expected), "[-] The output is different than expected for quickSort"
-print("[+] quickSort Test passed")
+    expected = [10,30,40,200,400,4000]
+    ar1 = [10,400,40,30,4000,200]
+    b = quickSort(ar1, 0,len(ar1)-1)
+    assert comapareArrays(b, expected), "[-] The output is different than expected for quickSort"
+    print("[+] quickSort Test passed")
+    
+if __name__ == "__main__":
+    runTests()
