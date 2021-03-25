@@ -36,8 +36,7 @@ def insertionSort(ar):
     return ar
 
 """
-    Ich bin definitiv zu blöd um Quicksort zu implementieren
-    --> RAUSCHEN IM KOPF! fuck off
+    geschafft? 
 """
 def quickSort(daten, links, rechts):
     i = links
